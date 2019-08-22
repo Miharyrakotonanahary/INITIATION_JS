@@ -1,12 +1,18 @@
-var total = 1;
-function factorielle(input) {
-    for(input; input >=1; input--){    
-    // total += ((input-1) * total);
-    total *= input;
+/****     CALCULE RAPIDES      ****/
+let number = prompt("Entrer un nombre entier naturel");
+let i = 1;
+let fact = 1;
+let n = number;
+  if (number === 0) {
+    console.log(number + "! = 0");
+  }
+  else{
+    while (true){
+      if (n === 0) {
+        break;
+      }
+      fact = fact * n
+      n--;
     }
-    return total;
-}
-console.log("De quel nombre veux-tu la factorielle ?");
-var number = prompt("De quel nombre veux-tu la factorielle ?");
-console.log(Vous avez choisi : ${number});
-console.log(Le résultat est : ${factorielle(Number(number))});
+    console.log(number + "! = " + fact);
+  }
